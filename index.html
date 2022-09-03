@@ -21,18 +21,70 @@
 
     <!-- Nav Bar -->
     <header class="container mt-3 mb-5 d-flex justify-content-between">
-        <div>
-            <h1 class="fw-bolder text-primary"> <span class="text-secondary">News</span> Mirror</h1>
-        </div>
-
-        <div class="d-flex justify-content-around">
-                <h2 class="fw-bold text-primary me-3">News</h2>
-                <h2 class="fw-bold text-primary">Blog</h2>
-        </div>
+            <div>
+                <h1 class="fw-bolder text-primary"> <span class="text-secondary">News</span> Mirror</h1>
+            </div>
+    
+            <div class="d-flex justify-content-around">
+                    <h2 class="fw-bold text-primary me-3">News</h2>
+                    <button onclick="viewQuestions()" class="btn btn-primary fw-bold text-white">Blog</button>
+            </div>
     </header>
 
     <!-- Main Body -->
     <main class="container">
+
+        <!-- Blog Qiestions -->
+        <section class="d-none" id="accordion">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      What are the difference between var, let & const?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"> <b>var:</b> var declarations are globally scoped or function/locally scoped. Any value declared with var can be changed at any time. <br>
+                    <b>Let:</b> let is now preferred for variable declaration. It comes as an improvement to var declarations. A variable declared in a block with let  is only available for use within that block. <br>
+                <b>const: </b>Variables declared with the const maintain constant values. const declarations share some similarities with let declarations. Variables declared with const cannot be re-assigned.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      What are the difference between Arrow Function and Regular Function in JavaScript?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Regular functions created using function declarations or expressions are constructible and callable. Since regular functions are constructible, they can be called using the new keyword. However, the arrow functions are only callable and not constructible, i.e arrow functions can never be used as constructor functions.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      .map(), .forEach(), filter() & find() in JavaScript
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><b>.map(): </b>.map() executes the same code on every element in an array and returns a new array with the updated elements. <br>
+                    <b>.forEach(): </b>.forEach(), is used to execute the same code on every element in an array but does not change the array and it returns undefined. <br>
+                    <b>.filter(): </b>.filter() checks every element in an array to see if it meets a certain criteria and returns a new array with the elements that return truthy for the criteria. <br>
+                    <b>.find() </b>.find() returns only one match in an array. If in an array is more than one result, the function will return the first that has matched.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      Why template string is used in JavaScript
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements.</div>
+                  </div>
+                </div>
+              </div>
+        </section>
+
         <!-- News Menu Design -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">

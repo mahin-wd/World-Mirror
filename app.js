@@ -1,3 +1,14 @@
+const questions = isClicked =>{
+    const accordion = document.getElementById('accordion');
+    if(isClicked){
+        accordion.classList.remove('d-none')
+    }
+}
+
+const viewQuestions = () =>{
+    questions(true);
+}
+
 const loadNewsMenu = () =>{
     const  url = `https://openapi.programming-hero.com/api/news/categories`;
     fetch(url)
