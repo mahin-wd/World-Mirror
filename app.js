@@ -25,10 +25,18 @@ const loadNews = (category_id) =>{
 }
 
 const displayNews = allNews =>{
-    console.log(allNews)
     const cardBody = document.getElementById('card-body');
     cardBody.innerHTML = ''
+    if(allNews.length >= 0){
+        const newsNumber = document.getElementById('news-Number');
+        newsNumber.innerHTML = `
+                    <h3>${allNews.length} Items found for  this category</h3>
+                `
+    }
     allNews.forEach(news =>{
+        
+            
+
         const cardDiv = document.createElement('div');
         cardDiv.classList.add('col');
         cardDiv.innerHTML = `
@@ -76,3 +84,6 @@ const displayModal = newsDetail =>{
 
 
 loadNewsMenu();
+
+
+

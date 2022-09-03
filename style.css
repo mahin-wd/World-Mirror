@@ -12,8 +12,19 @@
     list-style: none;
 }
 
+
 .author-image{
     height: 35px;
     border-radius: 50%;
     display: block;
+}
+
+#news-Number{
+    background-color: #d1d1d1;
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
