@@ -30,3 +30,11 @@
 #spinner{
     height: 500px;
 }
+
+footer{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #808080;
+}
