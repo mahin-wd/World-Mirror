@@ -15,13 +15,16 @@ const displayMenu = menus =>{
         menuLis.classList.add('menu-list')
         newsMenu.appendChild(menuLis);
     })
+    
 }
 
 const loadNews = (category_id) =>{
+    // loader(true);
     const url2 = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
     fetch(url2)
     .then(res => res.json())
     .then(data => displayNews(data.data))
+    .catch(error => console.log(error))
 }
 
 const displayNews = allNews =>{
@@ -34,9 +37,6 @@ const displayNews = allNews =>{
                 `
     }
     allNews.forEach(news =>{
-        
-            
-
         const cardDiv = document.createElement('div');
         cardDiv.classList.add('col');
         cardDiv.innerHTML = `
@@ -62,6 +62,7 @@ const displayNews = allNews =>{
         `;
         cardBody.appendChild(cardDiv);
     })
+    // loader(false);
 }
 
 const detail = (news_id) =>{
@@ -69,6 +70,7 @@ const detail = (news_id) =>{
     fetch(url3)
     .then(res => res.json())
     .then(data => displayModal(data.data))
+    .catch(error => console.log(error))
 }
 
 const displayModal = newsDetail =>{
@@ -82,6 +84,12 @@ const displayModal = newsDetail =>{
     })
 }
 
+const loader = isLoading =>{
+    const spinner = document.getElementById('spinner');
+    if(isLoading){
+      spinner.classList.remove('d-none');
+    }
+  }
 
 loadNewsMenu();
 
