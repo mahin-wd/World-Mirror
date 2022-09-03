@@ -60,11 +60,18 @@ const detail = (news_id) =>{
     const url3 = `https://openapi.programming-hero.com/api/news/${news_id}`
     fetch(url3)
     .then(res => res.json())
-    .then(data => console.log(data.data))
+    .then(data => displayModal(data.data))
 }
 
-const displayModal = () =>{
-    const modalBody = document.getElementById('')
+const displayModal = newsDetail =>{
+    newsDetail.forEach(news =>{
+        const modalTitle = document.getElementById('newsDetaillLabel');
+        modalTitle.innerText = news.title;
+        const modalBody = document.getElementById('modal-body');
+        modalBody.innerHTML = `
+            <p>${news.details}</p>
+        `;
+    })
 }
 
 
