@@ -6,7 +6,7 @@ const loadNewsMenu = () =>{
 }
 
 const displayMenu = menus =>{
-    const newsMenu = document.getElementById('news-menu');
+    const newsMenu = document.getElementById('navbarSupportedContent');
     menus.forEach(menu=>{ 
         const menuLis = document.createElement('ul');
         menuLis.innerHTML = `
